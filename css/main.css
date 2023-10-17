@@ -1,0 +1,113 @@
+.main_section {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    padding: 45px 0 145px 0;
+  }
+  
+  .main_section .row {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .main_section .main-box {
+    color: #ffffff;
+  }
+  
+  .main_section .main-box h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #ffffff;
+  }
+  
+  .main_section .main-box h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #ffffff;
+  }
+  
+  .main_section .main-box p {
+    color: #fefefe;
+    font-size: 14px;
+  }
+  
+  .main_section .main-box .btn-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 -5px;
+    margin-top: 25px;
+  }
+  
+  .main_section .main-box .btn-box a {
+    margin: 5px;
+    text-align: center;
+    width: 165px;
+  }
+  
+  .main_section .main-box .btn-box button {
+    margin: 5px;
+    text-align: center;
+    width: 165px;
+  }
+
+  .main_section .main-box .btn-box .btn1 {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #5f2853;
+    color: #ffffff;
+    border-radius: 20px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border: none;
+  }
+  
+  .main_section .main-box .btn-box .btn1:hover {
+    background-color: #800040;
+  }
+  
+  .main_section .textarea {
+    border-radius: 20px;
+    padding: 15px;
+  }
+  
+  .main_section .gauge {
+    width: 300px;
+    height: 150px;
+    position: relative;
+    border-top-left-radius: 125px;
+    border-top-right-radius: 125px;
+    border: 5px solid #ffffff;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  
+  .main_section .gauge-fill {
+    position: absolute;
+    width: 0;
+    height: 100%;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    transition: width 0.3s;
+    
+  }
+  
+  .main_section .face {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 4rem;
+    transform: translate(-50%, -50%);
+  }
