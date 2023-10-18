@@ -78,6 +78,11 @@
   <!-- MAIN -->
   <!-- MAIN -->
 
+  <div id="popup" class="popup">
+    <span class="close" id="close-popup">&times;</span>
+    <div id="popup-content" class="popup-content"></div>
+  </div>
+
   <section class="main_section">
     <div class="container">
       <div class="row">
@@ -115,9 +120,9 @@
   <script>
     const sendPostRequest = async () => {
       try {
-        const ipAddress = '54.198.38.242';
-        const port = '5000';
-        const endpoint = `http://${ipAddress}:${port}/`;
+        /*const ipAddress = '54.198.38.242';
+        const port = '5000';*/
+        const endpoint = `https://lxs84qe6r2.execute-api.us-east-1.amazonaws.com/qa`;
 
         const requestBody = {
           "key1": "mole" // Make sure to use a string here
@@ -126,13 +131,17 @@
         const json = JSON.stringify(requestBody);
 
         const response = await fetch(endpoint, {
-          method: 'POST',
-          headers: {
+          method: 'GET',
+          /*headers: {
             'Content-Type': 'application/json',
           },
           body: json,
-          timeout: 60000
+          timeout: 60000*/
         });
+
+        const popup = document.getElementById('popup');
+        const popupContent = document.getElementById('popup-content');
+        const closeButton = document.getElementById('close-popup');
 
         if (response.ok) {
           // Request was successful
@@ -140,10 +149,16 @@
           console.log('POST request successful');
           console.log('La categoría es: ', responseText);
           // Set the response text or handle it as needed
+          popupContent.innerHTML = responseText;
         } else {
           // Request failed
           console.error('POST request failed with status:', response.status);
+          popupContent.innerHTML = 'Error: Request failed with status ' + response.status;
         }
+        popup.style.display = 'block'; 
+        closeButton.addEventListener('click', () => {
+        popup.style.display = 'none';});
+        
       } catch (error) {
         console.error('Error sending POST request:', error);
         if (error.message === 'Network request timed out') {
@@ -155,7 +170,7 @@
     // Add a click event listener to the "Enviar" button
     document.getElementById('enviarBtn').addEventListener('click', sendPostRequest);
   </script>
-  
+
   <script>
     // Add a click event listener to the "Enviar" button
     document.getElementById('enviarBtn').addEventListener('click', function() {
