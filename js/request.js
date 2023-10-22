@@ -2,7 +2,7 @@ const sendPostRequest = async () => {
   try {
     const ipAddress = '54.198.38.242';
     const port = '5000';
-    const endpoint = `http://${ipAddress}:${port}/`;
+    const endpoint = `https://${ipAddress}:${port}/`;
 
     const requestBody = {
       "key1": moleTA
