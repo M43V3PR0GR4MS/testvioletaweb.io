@@ -25,4 +25,4 @@ function updateGauge(value) {
   }
   
   // Usage: Call this function with the desired value (0-5 for increments of 20%)
-  updateGauge(3); // For example, to set the gauge to 60%
+  updateGauge(1); // For example, to set the gauge to 60%
